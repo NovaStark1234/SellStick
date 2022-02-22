@@ -1,0 +1,11 @@
+name: SellStick
+main: Nova\SellStick\Main
+author: NovaStark1245
+api: 4.0.0
+version: 0.0.1
+depend: BedrockEconomy
+
+permissions:
+ sellstick.command.use:
+  description: Allow the player use sellstick command
+  default: op
