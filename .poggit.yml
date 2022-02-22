@@ -1,0 +1,10 @@
+--- 
+# Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/NovaStark1234/SellStick
+build-by-default: true
+branches:
+- main
+projects:
+  SellStick:
+    path: ""
+    icon: "icon.yml"
+...
