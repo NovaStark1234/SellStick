@@ -1,5 +1,9 @@
 <div align="center">
 <h1>SellStick | v0.0.1<h1>
+</div>
+<p align="center">
+<a href="https://poggit.pmmp.io/p/HelpBook"><img src="https://poggit.pmmp.io/shield.state/SellStick">
+</a>
 <br>
 ✔️ Sell all the items in the chest when the player using SellStick clicks on it ✔️
 </p>
@@ -16,7 +20,7 @@
 ## Commands
 | **Commands** | **Description** |
 | --- | --- |
-| **/sellstick** | **Give SellStick** |
+| **/sellstick** | **Sell Stick** |
 
 <br>
 
