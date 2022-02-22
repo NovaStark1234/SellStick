@@ -6,5 +6,5 @@ branches:
 projects:
   SellStick:
     path: ""
-    icon: "icon.yml"
+    icon: "icon.png"
 ...
