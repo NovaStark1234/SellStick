@@ -1,6 +1,4 @@
 ---
-#Format: "<id(int)>:<meta(int)>"
-sellstickitem: "369:0"
 sellstickname: "§l§aSell §bStick"
 sellsticklore: "§r§l§7Usage: Tap the chest to automatically sell all the items in the chest!"
 # Format:
