@@ -7,8 +7,5 @@ projects:
   SellStick:
     path: ""
     icon: "icon.png"
-    libs:
-    - src: Eric-pm-pl/LibEconomy/LibEconomy
-      version: ^1.0.0-alpha
 #kkk stupid lint
 ...
