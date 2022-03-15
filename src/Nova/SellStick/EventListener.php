@@ -9,7 +9,7 @@ use pocketmine\event\player\PlayerInteractEvent;
 
 use Nova\SellStick\Main;
 
-use YTBJero\LibEconomy\LibEconomy;
+use YTBJero\LibEconomy\Economy;
 
 class EventListener implements Listener {
   
