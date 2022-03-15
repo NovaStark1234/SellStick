@@ -18,7 +18,7 @@ final class Economy {
 	/**
 	 * @return array
 	 */
-	private function getEconomy(): array{
+	private static function getEconomy(): array{
 		$api = PMServer::getInstance()->getPluginManager()->getPlugin("EconomyAPI");
 		if($api !== null){
 			return [self::ECONOMYAPI, $api];
@@ -33,10 +33,10 @@ final class Economy {
 	 * @param  Player $player
 	 */
 	public static function myMoney(Player $player){
-		if($this->getEconomy()[0] === self::ECONOMYAPI){
-			return $this->getEconomy()[1]->myMoney($player);
-		} elseif($this->getEconomy()[0] === self::BEDROCKECONOMYAPI){
-			return $this->getEconomy()[1]->getAPI()->getPlayerBalance($player->getName());
+		if(self::getEconomy()[0] === self::ECONOMYAPI){
+			return self::getEconomy()[1]->myMoney($player);
+		} elseif(self::getEconomy()[0] === self::BEDROCKECONOMYAPI){
+			return self::getEconomy()[1]->getAPI()->getPlayerBalance($player->getName());
 		}
 	}
 	/**
@@ -44,10 +44,10 @@ final class Economy {
 	 * @param int $amount
 	 */
 	public static function addMoney(Player $player, $amount){
-		if($this->getEconomy()[0] === self::ECONOMYAPI){
-			$this->getEconomy()[1]->addMoney($player, $amount);
-		} elseif($this->getEconomy()[0] === self::BEDROCKECONOMYAPI){
-			return $this->getEconomy()[1]->getAPI()->addToPlayerBalance($player->getName(), (int) ceil($money));
+		if(self::getEconomy()[0] === self::ECONOMYAPI){
+			self::getEconomy()[1]->addMoney($player, $amount);
+		} elseif(self::getEconomy()[0] === self::BEDROCKECONOMYAPI){
+			return self::getEconomy()[1]->getAPI()->addToPlayerBalance($player->getName(), (int) ceil($money));
 		}
 	}
 	/**
@@ -55,10 +55,10 @@ final class Economy {
 	 * @param  int $amount
 	 */
 	public static function reduceMoney(Player $player, $amount){
-		if($this->getEconomy()[0] === self::ECONOMYAPI){
-			$this->getEconomy()[1]->reduceMoney($player, $amount);
-		} elseif($this->getEconomy()[0] === self::BEDROCKECONOMYAPI){
-			return $this->getEconomy()[1]->getAPI()->subtractFromPlayerBalance($player->getName(), (int) ceil($money));
+		if(self::getEconomy()[0] === self::ECONOMYAPI){
+			self::getEconomy()[1]->reduceMoney($player, $amount);
+		} elseif(self::getEconomy()[0] === self::BEDROCKECONOMYAPI){
+			return self::getEconomy()[1]->getAPI()->subtractFromPlayerBalance($player->getName(), (int) ceil($money));
 		}
 	}
 }
