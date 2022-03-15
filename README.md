@@ -34,15 +34,16 @@
 ## Config
 ```
 ---
-#Format: "<id(int)>:<meta(int)>"
-sellstickitem: "369:0"
 sellstickname: "§l§aSell §bStick"
 sellsticklore: "§r§l§7Usage: Tap the chest to automatically sell all the items in the chest!"
 # Format:
 #    - "<id(int)>,<meta(int)>:<cost(int|float)>"
 sell:
- - "1,0:1" #Stone Example
- - "4,0:1" #Cobblestone Example
+ - "1,0:1" #Stone
+ - "4,0:1" #Cobblestone
+ 
+ # Choose the type of economy you want to use ("bedrockeconomy", "economyapi")
+ economytype: "bedrockeconomy"
 ...
 ```
 
