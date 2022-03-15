@@ -32,7 +32,7 @@ class SellStickCommand extends Command implements PluginOwned {
 			if($this->testPermission($player)) {
 				$item = explode(":", $this->main->sell->get("sellstickitem"));
 				if(isset($args[0])) {
-					$stick = VanillaItems::BLAZE_ROD()->setCount(args[0]);
+					$stick = VanillaItems::BLAZE_ROD()->setCount($args[0]);
 				} else $stick = VanillaItems::BLAZE_ROD()->setCount(1);
 					$stick->setCustomName($this->main->sell->get("sellstickname"));
 					$stick->setLore([$this->main->sell->get("sellsticklore")]);
