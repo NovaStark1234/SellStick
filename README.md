@@ -41,9 +41,6 @@ sellsticklore: "§r§l§7Usage: Tap the chest to automatically sell all the item
 sell:
  - "1,0:1" #Stone
  - "4,0:1" #Cobblestone
- 
- # Choose the type of economy you want to use ("bedrockeconomy", "economyapi")
- economytype: "bedrockeconomy"
 ...
 ```
 
