@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginOwned;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 
-use pocketmine\item\ItemFactory;
+use pocketmine\item\VanillaItems;
 
 use Nova\SellStick\Main;
 
