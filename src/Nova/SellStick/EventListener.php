@@ -45,7 +45,7 @@ class EventListener implements Listener {
 				$id = explode(",", $sell);
 				$cost = explode(":", $sell);
 				if($item->getId() === ((int)$id[0]) and $item->getMeta() === ((int)$id[1])) {
-					LibEconomy::addMoney($player, $cost[1]*$item->getCount());
+					Economy::addMoney($player, $cost[1]*$item->getCount());
 					#BedrockEconomyAPI::getInstance()->addToPlayerBalance($player->getName(), ((int)$cost[1])*$item->getCount());
 					$all[] = ((int)$cost[1])*$item->getCount();
 					$tile->getInventory()->removeItem($item);
