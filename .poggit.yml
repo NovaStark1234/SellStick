@@ -8,8 +8,8 @@ projects:
     path: ""
     icon: "icon.png"
     libs:
-    - src: Nova/SellStick/libs/YTBJero/LibEconomy/Economy
+    - src: YTBJero/LibEconomy/Economy
       version: ^1.0.0-alpha
     lint:
-      phpstan: false
+      phpstan: true
 ...
