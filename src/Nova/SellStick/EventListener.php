@@ -28,7 +28,7 @@ class EventListener implements Listener {
 		$block = $event->getBlock();
 		if($item->getCustomName() === $this->main->sell->get("sellstickname")) {
 			if($block->getId() == 54) {
-				//$this->main->getLogger()->info($block->getFullId());
+				$event->cancel();
 				$this->sellItem($player, $block);
 			} else {
 				$player->sendMessage("§cPlease only click on chests to sell items!");
