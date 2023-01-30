@@ -2,9 +2,9 @@
 sellstickname: "§l§aSell §bStick"
 sellsticklore: "§r§l§7Usage: Tap the chest to automatically sell all the items in the chest!"
 # Format:
-#    - "<id(int)>,<meta(int)>:<cost(int|float)>"
+#    - "<name(string)>:<cost(int|float)>"
 sell:
- - "1,0:1" #Stone
- - "4,0:1" #Cobblestone
+  - 'stone:1'
+  - 'diamond_block: 9'
 ...
 
