@@ -5,6 +5,6 @@ sellsticklore: "§r§l§7Usage: Tap the chest to automatically sell all the item
 #    - "<name(string)>:<cost(int|float)>"
 sell:
   - 'stone:1'
-  - 'diamond_block: 9'
+  - 'diamond_block:9'
 ...
 
