@@ -4,6 +4,8 @@ namespace Nova\SellStick;
 
 use pocketmine\player\Player;
 
+use pocketmine\block\Chest;
+
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
 
@@ -27,7 +29,7 @@ class EventListener implements Listener {
 		$item = $event->getItem();
 		$block = $event->getBlock();
 		if($item->getCustomName() === $this->main->sell->get("sellstickname")) {
-			if($block->getId() == 54) {
+			if($block instanceof Chest) {
 				//$this->main->getLogger()->info($block->getFullId());
 				$this->sellItem($player, $block);
 			} else {
@@ -42,12 +44,12 @@ class EventListener implements Listener {
 		$all = [];
 		foreach($items as $slot => $item) {
 			foreach($this->main->sell->get("sell") as $sell) {
-				$id = explode(",", $sell);
-				$cost = explode(":", $sell);
-				if($item->getId() === ((int)$id[0]) and $item->getMeta() === ((int)$id[1])) {
-					Economy::addMoney($player, $cost[1]*$item->getCount());
-					#BedrockEconomyAPI::getInstance()->addToPlayerBalance($player->getName(), ((int)$cost[1])*$item->getCount());
-					$all[] = ((int)$cost[1])*$item->getCount();
+				$data = explode(":", $sell);
+				$data_name = strtolower(str_replace(' ', '_', $data[0]));
+				$name_item = strtolower(str_replace(' ', '_', $item->getVanillaName()));
+				if($name_item == $data_name) {
+					Economy::addMoney($player, $data[1]*$item->getCount());
+					$all[] = ((int)$data[1])*$item->getCount();
 					$tile->getInventory()->removeItem($item);
 				}
 			}
